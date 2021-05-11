@@ -23,7 +23,7 @@ docker run -d --gpus all -p 8889:8888 -p 6006:6006 --name rl rl
 
 Now, you have a container named ``rl`` running Jupyter Lab ! You can access it from ``http://127.0.0.1:8889``. Default password is ``gpu-jupyter``.
 
-**Note :** The port 6006 is for ``tensorboard``.
+**Note :** The port 6006 is for ``tensorboard``. You can use ``tensorboard --logdir ./tensorboard --bind_all`` to run tensorboard.
 
 Now, you can clone this repository :
 ```bash
@@ -44,4 +44,5 @@ docker exec -u root -it rl bash
 ### Optional dependencies
 
 You can install ``pybulletgym`` for more environments. Please take a look at https://github.com/benelot/pybullet-gym#installing-pybullet-gym.
+
 **Note :** you should run the commands as root inside the container to perform a system-wide installation.
